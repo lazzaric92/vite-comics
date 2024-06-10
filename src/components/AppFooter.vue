@@ -153,31 +153,31 @@ export default {
                 {
                     id: 1,
                     title: 'Facebook',
-                    image: '../assets/img/footer-facebook',
+                    image: '../assets/img/footer-facebook.png',
                     url: '#'
                 },
                 {
                     id: 2,
                     title: 'Twitter',
-                    image: '../assets/img/footer-twitter',
+                    image: '../assets/img/footer-twitter.png',
                     url: '#'
                 },
                 {
                     id: 3,
                     title: 'Youtube',
-                    image: '../assets/img/footer-youtube',
+                    image: '../assets/img/footer-youtube.png',
                     url: '#'
                 },
                 {
                     id: 4,
                     title: 'Pinterest',
-                    image: '../assets/img/footer-pinterest',
+                    image: '../assets/img/footer-pinterest.png',
                     url: '#'
                 },
                 {
                     id: 5,
                     title: 'Periscope',
-                    image: '../assets/img/footer-periscope',
+                    image: '../assets/img/footer-periscope.png',
                     url: '#'
                 }
             ]
@@ -211,9 +211,29 @@ export default {
                 <div class="socials">
                     <h2>Follow us</h2>
                     <ul>
-                        <li v-for="link in socialLinks" :key="link.id">
-                            <a :href="link.url">
-                                <img :src="`${link.image}.png`" :alt="`${link.title} Icon`">
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/footer-facebook.png" alt="Facebook Icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/footer-twitter.png" alt="Twitter Icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/footer-youtube.png" alt="Youtube Icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/footer-pinterest.png" alt="Pinterest Icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/footer-periscope.png" alt="Periscope Icon">
                             </a>
                         </li>
                     </ul>
@@ -266,6 +286,11 @@ export default {
 
         a {
             color: $font-grey;
+        }
+
+        a:hover{
+            text-decoration: underline;
+            color: white;
         }
     }
 
