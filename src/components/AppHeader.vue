@@ -76,7 +76,7 @@ data(){
             <nav>
                 <ul>
                     <li v-for="link in headerLinks" :key="link.id" :class="(link.active) ? 'active' : ''">
-                        <a href="#"> {{ link.title }} </a>
+                        <a :href="link.url"> {{ link.title }} </a>
                     </li>
                 </ul>
             </nav>

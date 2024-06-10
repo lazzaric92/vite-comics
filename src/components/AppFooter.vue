@@ -2,7 +2,185 @@
 export default {
     data(){
         return {
-            message: 'Footer',
+            navs: [
+                {
+                    title : 'DC Comics', 
+                    links : [
+                        {
+                            id: 1,
+                            title: 'Characters',
+                            url: '#'
+                        },
+                        {
+                            id: 2,
+                            title: 'Comics',
+                            url: '#'
+                        },
+                        {
+                            id: 3,
+                            title: 'Movies',
+                            url: '#'
+                        },
+                        {
+                            id: 4,
+                            title: 'Tv',
+                            url: '#'
+                        },
+                        {
+                            id: 5,
+                            title: 'Games',
+                            url: '#'
+                        },
+                        {
+                            id: 6,
+                            title: 'Videos',
+                            url: '#'
+                        },
+                        {
+                            id: 7,
+                            title: 'News',
+                            url: '#'
+                        }
+                    ],
+                },
+                {
+                    title: 'Shop',
+                    links: [
+                        {
+                            id: 1,
+                            title: 'Shop DC',
+                            url: '#'
+                        },
+                        {
+                            id: 2,
+                            title: 'Shop DC Collectibles',
+                            url: '#'
+                        }
+                    ],
+                },
+                {
+                    title:'DC',
+                    links: [
+                        {
+                            id: 1,
+                            title: 'Terms Of Use',
+                            url: '#'
+                        },
+                        {
+                            id: 2,
+                            title: 'Privacy policy (New)',
+                            url: '#'
+                        },
+                        {
+                            id: 3,
+                            title: 'Ad Choices',
+                            url: '#'
+                        },
+                        {
+                            id: 4,
+                            title: 'Advertising',
+                            url: '#'
+                        },
+                        {
+                            id: 5,
+                            title: 'Jobs',
+                            url: '#'
+                        },
+                        {
+                            id: 6,
+                            title: 'Subscriptions',
+                            url: '#'
+                        },
+                        {
+                            id: 7,
+                            title: 'Talent Workshops',
+                            url: '#'
+                        },
+                        {
+                            id: 8,
+                            title: 'CPSC Certificates',
+                            url: '#'
+                        },
+                        {
+                            id: 9,
+                            title: 'Ratings',
+                            url: '#'
+                        },
+                        {
+                            id: 10,
+                            title: 'Shop Help',
+                            url: '#'
+                        },
+                        {
+                            id: 11,
+                            title: 'Contact Us',
+                            url: '#'
+                        }
+                    ],
+                },
+                {
+                    title:'Sites',
+                    links: [
+                    {
+                            id: 1,
+                            title: 'DC',
+                            url: '#'
+                        },
+                        {
+                            id: 2,
+                            title: 'MAD Magazine',
+                            url: '#'
+                        },
+                        {
+                            id: 3,
+                            title: 'DC Kids',
+                            url: '#'
+                        },
+                        {
+                            id: 4,
+                            title: 'DC Universe',
+                            url: '#'
+                        },
+                        {
+                            id: 5,
+                            title: 'DC Power Visa',
+                            url: '#'
+                        }
+                    ],
+                }
+            ],
+            socialLinks: [
+                {
+                    id: 1,
+                    title: 'Facebook',
+                    image: '../assets/img/footer-facebook',
+                    url: '#'
+                },
+                {
+                    id: 2,
+                    title: 'Twitter',
+                    image: '../assets/img/footer-twitter',
+                    url: '#'
+                },
+                {
+                    id: 3,
+                    title: 'Youtube',
+                    image: '../assets/img/footer-youtube',
+                    url: '#'
+                },
+                {
+                    id: 4,
+                    title: 'Pinterest',
+                    image: '../assets/img/footer-pinterest',
+                    url: '#'
+                },
+                {
+                    id: 5,
+                    title: 'Periscope',
+                    image: '../assets/img/footer-periscope',
+                    url: '#'
+                }
+            ]
         }
     }
 }
@@ -13,80 +191,13 @@ export default {
         <section class="footer-nav">
             <div class="container">
                 <div class="nav-wrapper">
-                    <nav>
-                        <h2>DC Comics</h2>
+                    <nav v-for="(nav, index) in navs" :key="nav.index">
+                        <h2> {{ nav.title }} </h2>
                         <ul>
-                            <li>
-                                <a href="#">link</a>
-                            </li>
-                            <li>
-                                <a href="#">link</a>
-                            </li>
-                            <li>
-                                <a href="#">link</a>
-                            </li>
-                            <li>
-                                <a href="#">link</a>
-                            </li>
-                            <li>
-                                <a href="#">link</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <nav>
-                        <h2>DC Comics</h2>
-                        <ul>
-                            <li>
-                                <a href="#">link</a>
-                            </li>
-                            <li>
-                                <a href="#">link</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <nav>
-                        <h2>DC Comics</h2>
-                        <ul>
-                            <li>
-                                <a href="#">link</a>
-                            </li>
-                            <li>
-                                <a href="#">link</a>
-                            </li>
-                            <li>
-                                <a href="#">link</a>
-                            </li>
-                            <li>
-                                <a href="#">link</a>
-                            </li>
-                            <li>
-                                <a href="#">link</a>
-                            </li>
-                            <li>
-                                <a href="#">link</a>
-                            </li>
-                            <li>
-                                <a href="#">link</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <nav>
-                        <h2>DC Comics</h2>
-                        <ul>
-                            <li>
-                                <a href="#">link</a>
-                            </li>
-                            <li>
-                                <a href="#">link</a>
-                            </li>
-                            <li>
-                                <a href="#">link</a>
-                            </li>
-                            <li>
-                                <a href="#">link</a>
-                            </li>
-                            <li>
-                                <a href="#">link</a>
+                            <li v-for="link in nav.links" :key="link.id">
+                                <a :href="link.url">
+                                    {{ link.title }}
+                                </a>
                             </li>
                         </ul>
                     </nav>
@@ -100,22 +211,10 @@ export default {
                 <div class="socials">
                     <h2>Follow us</h2>
                     <ul>
-                        <li>
-                            <a href="#">
-                                <img src="../assets/img/footer-facebook.png" alt="Facebook Icon">
+                        <li v-for="link in socialLinks" :key="link.id">
+                            <a :href="link.url">
+                                <img :src="`${link.image}.png`" :alt="`${link.title} Icon`">
                             </a>
-                        </li>
-                        <li>
-                            <img src="../assets/img/footer-twitter.png" alt="Twitter Icon">
-                        </li>
-                        <li>
-                            <img src="../assets/img/footer-youtube.png" alt="Youtube Icon">
-                        </li>
-                        <li>
-                            <img src="../assets/img/footer-pinterest.png" alt="Pinterest Icon">
-                        </li>
-                        <li>
-                            <img src="../assets/img/footer-periscope.png" alt="Periscope Icon">
                         </li>
                     </ul>
                 </div>
@@ -149,15 +248,18 @@ export default {
             padding: 3rem 0;
 
             nav {
-                margin-right: 3rem;
-                margin-bottom: .75rem;
+                margin-right: 2rem;
+                margin-bottom: .5rem;
 
                 h2 {
-                    margin-bottom: 1rem;
+                    margin-bottom: .8rem;
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
                 }
 
                 li {
                     margin-bottom: .3rem;
+                    font-size: .8rem;
                 }
             }
         }
