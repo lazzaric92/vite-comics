@@ -9,9 +9,23 @@ export default {
 </script>
 
 <template>
-    <h1> {{ message }} </h1>
+    <main>
+        <div class="container">
+            <h1>--> Content goes here <--</h1>
+        </div>
+    </main>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+    @use '../styles/partials/variables' as *;
+    @use '../styles/partials/mixins' as *;
 
+    main {
+        padding: 3.5rem 0;
+    }
+
+    div.container {
+        @include my-container();
+    }
+    
 </style>
