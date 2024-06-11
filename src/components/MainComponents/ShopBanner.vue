@@ -38,27 +38,32 @@ export default{
     },
     methods: {
         getImagePath: function(img){
-            return new URL(`../assets/img/${img}`, import.meta.url).href;
+            return new URL(`../../assets/img/${img}`, import.meta.url).href;
         }
     }
 }
 </script>
 
 <template>
-    <div class="container">
-        <ul>
-            <li v-for="link in shopLinks" :key="link.id">
-                <img :src="getImagePath(link.image)" :alt="link.title">
-                <a :href="link.url"> {{ link.title }} </a>
-            </li>
-        </ul>
-    </div>
+    <section class="shop-banner">
+        <div class="container">
+            <ul>
+                <li v-for="link in shopLinks" :key="link.id">
+                    <img :src="getImagePath(link.image)" :alt="link.title">
+                    <a :href="link.url"> {{ link.title }} </a>
+                </li>
+            </ul>
+        </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
-    @use '../styles/partials/variables' as *;
-    @use '../styles/partials/mixins' as *;
+    @use '../../styles/partials/variables' as *;
+    @use '../../styles/partials/mixins' as *;
 
+    .shop-banner {
+        background-color: $primary-color;
+    }
 
     div.container {
         @include my-container();

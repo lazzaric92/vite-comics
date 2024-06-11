@@ -1,5 +1,9 @@
 <script>
-import ShopBanner from './ShopBanner.vue'
+import ShopBanner from './MainComponents/ShopBanner.vue';
+import MainJumbotron from './MainComponents/MainJumbotron.vue';
+import MainContent from './MainComponents/MainContent.vue';
+
+
 export default {
     data(){
         return {
@@ -8,38 +12,20 @@ export default {
     },
     components: {
         ShopBanner,
+        MainJumbotron,
+        MainContent,
     }
 }
 </script>
 
 <template>
     <main>
-        <section class="main-content">
-            <div class="container">
-                <h1>--> Content goes here <--</h1>
-            </div>
-        </section>
-        <section class="shop-banner">
-            <ShopBanner />
-        </section>
+        <MainJumbotron />
+        <MainContent />
+        <ShopBanner />
     </main>
 </template>
 
 <style lang="scss" scoped>
-    @use '../styles/partials/variables' as *;
-    @use '../styles/partials/mixins' as *;
-
-
-    div.container {
-        @include my-container();
-    }
-
-    .main-content {
-        padding: 3.5rem 0;
-    }
-
-    .shop-banner {
-        background-color: $primary-color;
-    }
     
 </style>
