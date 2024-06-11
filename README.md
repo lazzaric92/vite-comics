@@ -13,4 +13,4 @@ Creare un componente aggiuntivo per gestire la fascia azzurra con le icone.
 Create un nuovo componente che rappresenterà le card dei fumetti.
 Utilizzate i dati presenti nel file json che trovate in allegato e passateli al componente Card tramite props.
 Una volta inseriti tutti i contenuti dinamicamente, completate il vostro layout e rifinite i dettagli con Sass.
-// Creo dei componenti separati per il jumbotron, la sezione main-content con il card-wrapper e la singola card.
+// Creo dei componenti separati per il jumbotron, la sezione main-content con il card-wrapper e la singola card. Nella sezione main-content preparo il card-wrapper che verrà popolato con le cards.
