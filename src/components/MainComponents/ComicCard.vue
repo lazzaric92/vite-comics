@@ -27,6 +27,7 @@ export default{
     article{
         width: calc((100% / 6) - 1rem);
         margin: 0 .5rem 3.5rem;
+        cursor: pointer;
 
         .card-image{
             width: 100%;

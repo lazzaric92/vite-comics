@@ -89,6 +89,9 @@ export default{
 <template>
     <section class="main-content">
         <div class="container">
+            <div class="tag">
+                <h2>Current series</h2>
+            </div>
             <div class="card-wrapper">
                 <ComicCard v-for="(card, index) in cardsList" :key="card.index" :singleCard="card"/>
             </div>
@@ -110,6 +113,16 @@ export default{
         @include column-center();
     }
 
+    .tag {
+        background-color: $primary-color;
+        text-transform: uppercase;
+        padding: .5rem 1.5rem;
+        align-self: flex-start;
+        margin-top: -4.8rem;
+        margin-bottom: 2rem;
+        margin-left: -.5rem;
+    }
+
     .card-wrapper {
         width: 100%;
         display: flex;
@@ -123,5 +136,6 @@ export default{
         font-weight: bold;
         border: none;
         padding: .5rem 3rem;
+        cursor: pointer;
     }
 </style>
