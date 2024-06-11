@@ -153,31 +153,31 @@ export default {
                 {
                     id: 1,
                     title: 'Facebook',
-                    image: '../assets/img/footer-facebook.png',
+                    image: './src/assets/img/footer-facebook.png',
                     url: '#'
                 },
                 {
                     id: 2,
                     title: 'Twitter',
-                    image: '../assets/img/footer-twitter.png',
+                    image: './src/assets/img/footer-twitter.png',
                     url: '#'
                 },
                 {
                     id: 3,
                     title: 'Youtube',
-                    image: '../assets/img/footer-youtube.png',
+                    image: './src/assets/img/footer-youtube.png',
                     url: '#'
                 },
                 {
                     id: 4,
                     title: 'Pinterest',
-                    image: '../assets/img/footer-pinterest.png',
+                    image: './src/assets/img/footer-pinterest.png',
                     url: '#'
                 },
                 {
                     id: 5,
                     title: 'Periscope',
-                    image: '../assets/img/footer-periscope.png',
+                    image: './src/assets/img/footer-periscope.png',
                     url: '#'
                 }
             ]
@@ -211,29 +211,9 @@ export default {
                 <div class="socials">
                     <h2>Follow us</h2>
                     <ul>
-                        <li>
-                            <a href="#">
-                                <img src="../assets/img/footer-facebook.png" alt="Facebook Icon">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="../assets/img/footer-twitter.png" alt="Twitter Icon">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="../assets/img/footer-youtube.png" alt="Youtube Icon">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="../assets/img/footer-pinterest.png" alt="Pinterest Icon">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="../assets/img/footer-periscope.png" alt="Periscope Icon">
+                        <li v-for="link in socialLinks" :key="link.id">
+                            <a :href="link.url">
+                                <img :src="link.image" :alt="`${link.title} Icon`">
                             </a>
                         </li>
                     </ul>

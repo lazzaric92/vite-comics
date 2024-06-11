@@ -2,7 +2,38 @@
 export default {
     data(){
         return {
-            message: 'Main',
+            shopLinks: [
+                {
+                    id: 1,
+                    title: 'Digital Comics',
+                    image: './src/assets/img/buy-comics-digital-comics.png',
+                    url: '#'
+                },
+                {
+                    id: 2,
+                    title: 'Merchandise',
+                    image: './src/assets/img/buy-comics-merchandise.png',
+                    url: '#'
+                },
+                {
+                    id: 3,
+                    title: 'Subscription',
+                    image: './src/assets/img/buy-comics-subscriptions.png',
+                    url: '#'
+                },
+                {
+                    id: 4,
+                    title: 'Comic Shop Locator',
+                    image: './src/assets/img/buy-comics-shop-locator.png',
+                    url: '#'
+                },
+                {
+                    id: 5,
+                    title: 'DC Power Visa',
+                    image: './src/assets/img/buy-dc-power-visa.svg',
+                    url: '#'
+                }
+            ]
         }
     }
 }
@@ -18,25 +49,9 @@ export default {
         <section class="shop-banner">
             <div class="container">
                 <ul>
-                    <li>
-                        <img src="../assets/img/buy-comics-digital-comics.png" alt="Digital Comics">
-                        <a href="#">Digital Comics</a>
-                    </li>
-                    <li>
-                        <img src="../assets/img/buy-comics-merchandise.png" alt="Merchandise">
-                        <a href="#">Merchandise</a>
-                    </li>
-                    <li>
-                        <img src="../assets/img/buy-comics-subscriptions.png" alt="Subscription">
-                        <a href="#">Subscription</a>
-                    </li>
-                    <li>
-                        <img src="../assets/img/buy-comics-shop-locator.png" alt="Comic Shop Locator">
-                        <a href="#">Comic Shop Locator</a>
-                    </li>
-                    <li>
-                        <img src="../assets/img/buy-dc-power-visa.svg" alt="DC Power Visa">
-                        <a href="#">DC Power Visa</a>
+                    <li v-for="link in shopLinks" :key="link.id">
+                        <img :src="link.image" :alt="link.title">
+                        <a :href="link.url"> {{ link.title }} </a>
                     </li>
                 </ul>
             </div>
@@ -52,7 +67,7 @@ export default {
     div.container {
         @include my-container();
     }
-    
+
     .main-content {
         padding: 3.5rem 0;
     }
@@ -78,7 +93,7 @@ export default {
             a {
                 text-transform: uppercase;
                 color: white;
-                font-size: .8rem;
+                font-size: .85rem;
             }
 
             a:hover{
