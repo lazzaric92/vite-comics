@@ -105,7 +105,7 @@ export default{
     @use '../../styles/partials/mixins' as *;
 
     .main-content {
-        padding: 3.5rem 0 1.5rem;
+        padding-bottom: 1.5rem;
     }
 
     div.container {
@@ -118,7 +118,7 @@ export default{
         text-transform: uppercase;
         padding: .5rem 1.5rem;
         align-self: flex-start;
-        margin-top: -4.8rem;
+        margin-top: -1.35rem;
         margin-bottom: 2rem;
         margin-left: -.5rem;
     }
